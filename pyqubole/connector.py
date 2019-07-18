@@ -20,8 +20,8 @@ class QuboleConnector:
     def _check_qubole_api_token_is_assigned(self, api_token=None):
         if api_token is None:
             if os.environ.get('QUBOLE_API_TOKEN') is None:
-                warnings.warn("The Qubole API Token is not set in the environment variables => os.environ['QUBOLE_API_TOKEN']")
-                api_token = os.environ['QUBOLE_API_TOKEN'] = input('Input Qubole API Token (as string in \'token_here\'): ')
+                warnings.warn("Qubole API Token is not set => os.environ['QUBOLE_API_TOKEN']")
+                api_token = os.environ['QUBOLE_API_TOKEN'] = input('Input Qubole API Token (as string): ')
             else:
                 api_token = os.environ.get('QUBOLE_API_TOKEN')
         return api_token
@@ -42,7 +42,7 @@ class QuboleConnector:
         fh.seek(0)
         qlog = json.loads(cmd.attributes['qlog'])
         cols = qlog['QBOL-QUERY-SCHEMA'][list(qlog['QBOL-QUERY-SCHEMA'].keys())[0]]
-        col_names = [re.sub(r'.+\.', '', col['ColumnName']) for col in cols] # regex formats names for aliased tables
+        col_names = [re.sub(r'.+\.', '', col['ColumnName']) for col in cols]  # regex formats names for aliased tables
         return pd.read_csv(fh, delimiter=chr(9), names=col_names, na_values='\\N')
 
     def read_data_from_hive(self, query, cluster, verbose=False):
@@ -86,7 +86,8 @@ class QuboleConnector:
         cmd = cmd.find(cmd.attributes['id'])
         return cmd
 
-    def get_completed_job(self, job_id):
+    @staticmethod
+    def get_completed_job(job_id):
         cmd = HiveCommand()
         cmd = cmd.find(job_id)
         print('Retrieving job:', job_id)
