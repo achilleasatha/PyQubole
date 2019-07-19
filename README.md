@@ -23,11 +23,12 @@ An example application needs to do:
   `data = con.query_data(sql_query=query, job_id=None, engine='Hive', cluster='Hive_cluster_name', verbose=False)`
   
   Note:
-    a) Query can be passed as a raw string `query = r"""select * from table"""` or from a file: `query = open('query.sql').read()`
+  
+  a) Query can be passed as a raw string `query = r"""select * from table"""` or from a file: `query = open('query.sql').read()`
+  
+  b) If `job_id = None` the query will be executed on the engine specified ('Hive' or 'Presto')
     
-    b) If `job_id = None` the query will be executed on the engine specified ('Hive' or 'Presto')
+  c) If `job_id = '123456'` then the results of the job will be retrieved (if job status is done)
     
-    c) If `job_id = '123456'` then the results of the job will be retrieved (if job status is done)
-    
-    d) You can use the optional method `verbose = True / False` to get streaming output or only status updates
+  d) You can use the optional method `verbose = True / False` to get streaming output or only status updates
     
