@@ -7,13 +7,15 @@ setuptools.setup(name='pyqubole',
       author='Achilleas Athanasiou Fragkoulis',
       author_email='achilleasatha@gmail.com',
       license='MIT',
-      # scripts=['pyqubole'],
       packages=setuptools.find_packages(),
-      # packages=['pyqubole'],
       zip_safe=False,
       install_requires=[
-            'pandas>=0.23.0',
-            'numpy'
-            #todo add frozen dependencies here pip freeze > requirements.txt
+            'qds_sdk',
+            're',
+            'os',
+            'pandas',
+            'json',
+            'time',
+            'warnings'
       ]
       )
