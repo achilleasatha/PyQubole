@@ -1,4 +1,4 @@
-from py_qubole.connector import QuboleConnector
+from qubolepystream.connector import QuboleConnector
 
 
 if __name__ == "__main__":

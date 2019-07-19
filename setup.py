@@ -1,6 +1,6 @@
 import setuptools
 
-setuptools.setup(name='py_qubole',
+setuptools.setup(name='qubolepystream',
       version='0.1',
       description='Simple and easy to use Qubole connector',
       url='https://github.com/achilleasatha/PyQubole',
