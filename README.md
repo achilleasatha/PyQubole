@@ -24,7 +24,10 @@ An example application needs to do:
   
   Note:
     a) Query can be passed as a raw string `query = r"""select * from table"""` or from a file: `query = open('query.sql').read()`
+    
     b) If `job_id = None` the query will be executed on the engine specified ('Hive' or 'Presto')
+    
     c) If `job_id = '123456'` then the results of the job will be retrieved (if job status is done)
+    
     d) You can use the optional method `verbose = True / False` to get streaming output or only status updates
     
