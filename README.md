@@ -8,7 +8,9 @@ The library is available on [PyPI - PyQubole](https://pypi.org/project/qubolepys
 `$ pip install pyqubole`
 
 ### From Source
-•Get source code: SSH `git@github.com:achilleasatha/PyQubole.git` or HTTPS `https://github.com/achilleasatha/PyQubole.git`
+•Get source code: SSH `git@github.com:achilleasatha/PyQubole.git` or HTTPS `https://github.com/achilleasatha/PyQubole.git` 
+
+
 •Install by running `python setup.py install` 
 
 ## API
