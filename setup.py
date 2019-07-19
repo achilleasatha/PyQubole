@@ -16,6 +16,7 @@ setuptools.setup(name='pyqubole',
             'pandas',
             'json',
             'time',
-            'warnings'
+            'warnings',
+            'io'
       ]
       )
