@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(name='qubolepystream',
-      version='0.5',
+      version='0.6',
       description='Simple and easy to use Qubole connector',
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -18,13 +18,6 @@ setuptools.setup(name='qubolepystream',
       packages=setuptools.find_packages(),
       zip_safe=False,
       install_requires=[
-            'qds_sdk',
-            're',
-            'os',
-            'pandas',
-            'json',
-            'time',
-            'warnings',
-            'io'
+            'qds_sdk'
       ]
       )
