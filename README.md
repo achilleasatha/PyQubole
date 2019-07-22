@@ -5,7 +5,7 @@ A watered down version of Qubole's Python connector providing a much simpler API
 ### From PyPI
 The library is available on [PyPI - PyQubole](https://pypi.org/project/qubolepystream/).
 
-`$ pip install pyqubole`
+`$ pip install qubolepystream`
 
 ### From Source
 •Get source code: SSH `git@github.com:achilleasatha/PyQubole.git` or HTTPS `https://github.com/achilleasatha/PyQubole.git` 
