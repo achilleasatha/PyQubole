@@ -17,9 +17,10 @@ The library is available on [PyPI - PyQubole](https://pypi.org/project/qubolepys
 You can find an example application in [example/main.py](https://github.com/achilleasatha/PyQubole/blob/master/example/main.py)
 
 An example application needs to do:
-  1. Set the api_token and instantiate the connection
+  1. Import the lib `from qubolepystream.connector import QuboleConnector`
+  2. Set the api_token and instantiate the connection
   `con = QuboleConnector(api_token='api_token')`
-  2. Use the query data method to run a job, specifying the input query, engine and cluster (or just job_id):
+  3. Use the query data method to run a job, specifying the input query, engine and cluster (or just job_id):
   `data = con.query_data(sql_query=query, job_id=None, engine='Hive', cluster='Hive_cluster_name', verbose=False)`
   
   Note:
