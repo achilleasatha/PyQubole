@@ -14,7 +14,9 @@ The library is available on [PyPI - PyQubole](https://pypi.org/project/qubolepys
 •Install by running `python setup.py install` 
 
 ## API
-You can find an example application in [example/main.py](https://github.com/achilleasatha/PyQubole/blob/master/example/main.py)
+You can find an example application in [example/main.py](https://github.com/achilleasatha/PyQubole/blob/master/example/main.py) including a Spark command example [example/spark_example.py](https://github.com/achilleasatha/PyQubole/blob/master/example/spark_example.py).
+
+More info on running Spark commands: [Qubole docs - Submit a Spark command](https://docs.qubole.com/en/latest/rest-api/command_api/submit-a-spark-command.html)
 
 An example application needs to do:
   1. Import the lib `from qubolepystream.connector import QuboleConnector`
@@ -27,9 +29,9 @@ An example application needs to do:
   
   a) Query can be passed as a raw string `query = r"""select * from table"""` or from a file: `query = open('query.sql').read()`
   
-  b) If `job_id = None` the query will be executed on the engine specified ('Hive' or 'Presto')
+  b) If `job_id = None` the query will be executed on the engine specified ('Hive', 'Presto' or 'Spark'')
     
   c) If `job_id = '123456'` then the results of the job will be retrieved (if job status is done)
     
-  d) You can use the optional method `verbose = True / False` to get streaming output or only status updates
+  d) You can use the optional method `verbose = True / False` to get streaming logs output or only status updates
     
