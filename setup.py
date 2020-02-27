@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(name='qubolepystream',
-      version='0.7.2',
+      version='0.8.0',
       description='Simple and easy to use Qubole connector',
       long_description=long_description,
       long_description_content_type='text/markdown',
